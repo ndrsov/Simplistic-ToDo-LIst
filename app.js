@@ -23,6 +23,10 @@ function addTodo(todo) {
 
     todoEl.innerText = todoText;
 
+    todoEl.addEventListener("click", () =>
+      todoEl.classList.toggle("completed")
+    );
+
     todosUl.appendChild(todoEl);
 
     input.value = "";
